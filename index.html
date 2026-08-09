@@ -17,14 +17,21 @@
         header {
             text-align: left;
         }
-        .profile-logo {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            object-fit: cover;
+        
+        /* --- Space Animation CSS --- */
+        .animation-container {
             margin-bottom: 0.5rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
+        .floating-planet {
+            animation: float 3.5s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+        /* --------------------------- */
+
         h1, h2, h3 {
             color: #111;
             font-weight: 600;
@@ -98,7 +105,16 @@
 <body>
 
     <header>
-        <img src="image_305534.png" alt="Logo" class="profile-logo">
+        <!-- Pure CSS/SVG Floating Planet Animation -->
+        <div class="animation-container">
+            <svg class="floating-planet" width="70" height="70" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="24" fill="#0366d6" />
+                <ellipse cx="50" cy="50" rx="42" ry="12" fill="none" stroke="#111" stroke-width="4" transform="rotate(-20 50 50)" />
+                <circle cx="42" cy="40" r="4" fill="#FFF" opacity="0.6" />
+                <circle cx="58" cy="62" r="2" fill="#FFF" opacity="0.4" />
+            </svg>
+        </div>
+
         <h1>Adrito Das</h1>
         <div class="contact-info">
             Incoming B.S. in Computer Science @ NYU Shanghai<br>
@@ -130,8 +146,8 @@
             <h3>Automated Coronary Artery Disease Detection Using a CNN Model with Temporal Attention</h3>
             <div class="project-meta">medRxiv Preprint | Co-Author / ML Engineer</div>
             <div class="project-links">
-                <a href="https://www.medrxiv.org/content/10.64898/2026.02.11.26346085v1" target="_blank">[📄 Paper DOI]</a>
-                <a href="https://github.com/ad8778-thegoat/CAD-Temporal-Attention-CNN" target="_blank">[💻 GitHub Code]</a>
+                <a href="https://www.medrxiv.org/content/10.64898/2026.02.11.26346085v1" target="_blank">[Paper DOI]</a>
+                <a href="https://github.com/ad8778-thegoat/CAD-Temporal-Attention-CNN" target="_blank">[GitHub Code]</a>
             </div>
             <ul>
                 <li>Engineered the 2D spatial feature extraction pipeline (ResNet18) and PyTorch optimization loops for an automated CAD detection model.</li>
@@ -176,7 +192,8 @@
     <section>
         <h2>Awards & Honors</h2>
         <ul>
-            <li>NASA International Space Apps Challenge "Galactic Problem Solver" Award</li>
+            <li><strong>NASA International Space Apps Challenge:</strong> "Galactic Problem Solver" Award</li>
+            <li><strong>National Economics Challenge:</strong> Top 8 in Nation out of 11,000 students <a href="https://www.councilforeconed.org/wp-content/uploads/NEC-2025-program-v4.pdf#page=7" target="_blank"><strong>[View Program - pg. 7]</strong></a></li>
         </ul>
     </section>
 
