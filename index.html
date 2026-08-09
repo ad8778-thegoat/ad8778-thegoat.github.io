@@ -14,6 +14,17 @@
             padding: 2rem;
             background-color: #FAFAFA;
         }
+        header {
+            text-align: left;
+        }
+        .profile-logo {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
         h1, h2, h3 {
             color: #111;
             font-weight: 600;
@@ -21,6 +32,7 @@
         h1 {
             font-size: 2.2rem;
             margin-bottom: 0.2rem;
+            margin-top: 0;
         }
         h2 {
             font-size: 1.4rem;
@@ -48,13 +60,21 @@
         .contact-info {
             font-size: 0.95rem;
             color: #555;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         .project-meta {
             font-size: 0.9rem;
             color: #666;
             font-style: italic;
+            margin-bottom: 0.2rem;
+        }
+        .project-links {
+            font-size: 0.9rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
+        }
+        .project-links a {
+            margin-right: 10px;
         }
         .tag {
             display: inline-block;
@@ -78,6 +98,7 @@
 <body>
 
     <header>
+        <img src="image_305534.png" alt="Logo" class="profile-logo">
         <h1>Adrito Das</h1>
         <div class="contact-info">
             Incoming B.S. in Computer Science @ NYU Shanghai<br>
@@ -94,7 +115,7 @@
 
         <article>
             <h3>Self-Supervised Spatiotemporal Masked Autoencoders for Few-Shot Cardiac Sequence Analysis</h3>
-            <div class="project-meta">In Preparation (Targeting NeurIPS ML4H 2025) | Sole Author</div>
+            <div class="project-meta">In Preparation (Targeting NeurIPS ML4H) | Sole Author</div>
             <ul>
                 <li>Developing a 3D Spatiotemporal Masked Autoencoder (MAE) to mitigate overfitting in low-resource cardiac MRI analysis via self-supervised reconstruction.</li>
             </ul>
@@ -107,7 +128,11 @@
 
         <article>
             <h3>Automated Coronary Artery Disease Detection Using a CNN Model with Temporal Attention</h3>
-            <div class="project-meta">medRxiv Preprint (Feb 2026) | Co-Author / ML Engineer</div>
+            <div class="project-meta">medRxiv Preprint | Co-Author / ML Engineer</div>
+            <div class="project-links">
+                <a href="https://www.medrxiv.org/content/10.64898/2026.02.11.26346085v1" target="_blank">[📄 Paper DOI]</a>
+                <a href="https://github.com/ad8778-thegoat/CAD-Temporal-Attention-CNN" target="_blank">[💻 GitHub Code]</a>
+            </div>
             <ul>
                 <li>Engineered the 2D spatial feature extraction pipeline (ResNet18) and PyTorch optimization loops for an automated CAD detection model.</li>
             </ul>
@@ -144,7 +169,7 @@
         <ul>
             <li><strong>Programming:</strong> Python, R, SQL, C++</li>
             <li><strong>Deep Learning:</strong> PyTorch, TensorFlow, Scikit-Learn</li>
-            <li><strong>Data & Tools:</strong> Pandas, NumPy, OpenCV, Git/GitHub, Linux CLI, Jupyter</li>
+            <li><strong>Data & Tools:</strong> Pandas, NumPy, OpenCV, Git/GitHub, Linux CLI</li>
         </ul>
     </section>
 
