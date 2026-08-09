@@ -1,1 +1,165 @@
-this is the process of being built so yea.... 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrito Das | ML Researcher</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #FAFAFA;
+        }
+        h1, h2, h3 {
+            color: #111;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.2rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+        h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+            margin-top: 1.5rem;
+        }
+        p {
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact-info {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        .project-meta {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        .tag {
+            display: inline-block;
+            background: #eee;
+            color: #333;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        li {
+            margin-bottom: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Adrito Das</h1>
+        <div class="contact-info">
+            Incoming B.S. in Computer Science @ NYU Shanghai<br>
+            <a href="mailto:adritodas25@gmail.com">adritodas25@gmail.com</a> • 
+            <a href="https://github.com/ad8778-thegoat" target="_blank">GitHub</a>
+        </div>
+        <p>
+            I am an undergraduate machine learning researcher focused on deep learning for medical imaging, self-supervised learning, and foundation models. My primary research explores applying spatiotemporal architectures to low-resource clinical datasets to build robust, generalizable AI diagnostics.
+        </p>
+    </header>
+
+    <section>
+        <h2>Core Machine Learning Research</h2>
+
+        <article>
+            <h3>Self-Supervised Spatiotemporal Masked Autoencoders for Few-Shot Cardiac Sequence Analysis</h3>
+            <div class="project-meta">In Preparation (Targeting NeurIPS ML4H 2025) | Sole Author</div>
+            <p>
+                Developing a novel 3D Spatiotemporal Masked Autoencoder (MAE) to address catastrophic overfitting in low-resource sequential medical imaging. By masking 75% of the spatiotemporal MRI patches, the model self-supervises the reconstruction of hidden physiological structures, learning robust kinematic representations of the cardiac cycle without downstream targets.
+            </p>
+            <div>
+                <span class="tag">PyTorch</span>
+                <span class="tag">Self-Supervised Learning</span>
+                <span class="tag">3D Convolutions</span>
+                <span class="tag">Masked Autoencoders</span>
+            </div>
+        </article>
+
+        <article>
+            <h3>Automated Coronary Artery Disease Detection Using a CNN Model with Temporal Attention</h3>
+            <div class="project-meta">medRxiv Preprint (Feb 2026) | Co-Author / ML Engineer</div>
+            <p>
+                Engineered the 2D spatial feature extraction pipeline and optimization loop for a CNN-LSTM architecture designed to detect CAD from sequential coronary angiograms. Developed the PyTorch data ingestion module to convert raw DICOM files to normalized tensors and implemented the baseline training loop (BCE Loss, Adam Optimizer), contributing to a model achieving an AUC of 0.9982.
+            </p>
+            <div>
+                <span class="tag">PyTorch</span>
+                <span class="tag">ResNet18</span>
+                <span class="tag">Data Engineering</span>
+                <span class="tag">Optimization</span>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <h2>Clinical & Economic Research (Side Projects)</h2>
+
+        <article>
+            <h3>Market Expansion and Efficacy of GLP-1 Receptor Agonists</h3>
+            <div class="project-meta">Harvard/MIT Collaboration | Published in JPHMP / JAMA</div>
+            <p>
+                Synthesized clinical data from 28+ randomized controlled trials (28,000+ patients) to evaluate efficacy deltas between semaglutide and tirzepatide. Modeled market expansion trajectories and investigated the "Supply-Regulatory Loop" by mapping adverse events against FDA enforcement actions.
+            </p>
+        </article>
+
+        <article>
+            <h3>Predictive Analytics of CNS Tumor Disease Burden</h3>
+            <div class="project-meta">Epidemiological Analysis</div>
+            <p>
+                Evaluated 42,822 new CNS cancer cases using GLOBOCAN datasets. Implemented predictive analytics pipelines to project up to a 70% surge in disease burden by 2045, benchmarking regional neurosurgical density against WHO infrastructural standards.
+            </p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <ul>
+            <li><strong>Programming:</strong> Python, R, SQL, C++</li>
+            <li><strong>Deep Learning:</strong> PyTorch, TensorFlow, Scikit-Learn</li>
+            <li><strong>Data & Tools:</strong> Pandas, NumPy, OpenCV, Git/GitHub, Linux CLI, Jupyter</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Awards & Honors</h2>
+        <ul>
+            <li>NASA International Space Apps Challenge "Galactic Problem Solver" Award</li>
+        </ul>
+    </section>
+
+    <footer style="margin-top: 4rem; padding-top: 1rem; border-top: 1px solid #ddd; font-size: 0.85rem; color: #777; text-align: center;">
+        &copy; 2026 Adrito Das. 
+    </footer>
+
+</body>
+</html>
