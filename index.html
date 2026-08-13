@@ -5,222 +5,251 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adrito Das | ML Researcher</title>
     <style>
+        :root {
+            --bg-color: #FDFCF9;
+            --text-main: #2D2A26;
+            --text-muted: #66635D;
+            --accent: #D96C4A; 
+            --link: #3B60E4;
+            --border: #E8E5E1;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            max-width: 720px;
             margin: 0 auto;
-            padding: 2rem;
-            background-color: #FAFAFA;
+            padding: 4rem 2rem;
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
         }
-        header {
-            text-align: left;
-        }
-        
-        /* cool aniamtion i just flipping made*/
+
         .animation-container {
-            margin-bottom: 0.5rem;
+            margin-bottom: 2rem;
         }
         .floating-planet {
-            animation: float 3.5s ease-in-out infinite;
+            animation: float 4s ease-in-out infinite;
         }
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-12px); }
-            100% { transform: translateY(0px); }
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
         }
-        
 
         h1, h2, h3 {
-            color: #111;
+            font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
             font-weight: 600;
+            color: #1A1A1A;
         }
+        
         h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
             margin-bottom: 0.2rem;
             margin-top: 0;
         }
-        h2 {
-            font-size: 1.4rem;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 0.5rem;
-            margin-top: 2.5rem;
-        }
-        h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.2rem;
-            margin-top: 1.5rem;
-        }
+
         p {
-            margin-top: 0.5rem;
-            margin-bottom: 1rem;
-            color: #444;
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
         }
+
         a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        a:hover {
+            color: var(--link);
             text-decoration: underline;
+            text-decoration-color: rgba(59, 96, 228, 0.3);
+            text-underline-offset: 3px;
+            transition: all 0.2s ease;
         }
-        .contact-info {
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 1.5rem;
+        
+        a:hover {
+            text-decoration-color: var(--link);
+            background-color: rgba(59, 96, 228, 0.05);
+        }
+
+        .intro-text {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        .intro-text strong {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .project {
+            margin-bottom: 2.5rem;
+            position: relative;
         }
         .project-meta {
-            font-size: 0.9rem;
-            color: #666;
-            font-style: italic;
-            margin-bottom: 0.2rem;
-        }
-        .project-links {
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .project-links a {
-            margin-right: 10px;
-        }
-        .tag {
-            display: inline-block;
-            background: #eee;
-            color: #333;
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
             font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.8rem;
+            display: block;
         }
-        ul {
-            padding-left: 1.5rem;
+        .tech-stack {
+            font-size: 0.85rem;
+            color: var(--text-muted);
             margin-top: 0.5rem;
         }
-        li {
-            margin-bottom: 0.3rem;
+        .tech-stack span::after {
+            content: " • ";
+            opacity: 0.5;
+        }
+        .tech-stack span:last-child::after {
+            content: "";
+        }
+
+        ul.custom-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul.custom-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+        ul.custom-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-family: monospace;
+        }
+
+        footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px dashed var(--border);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
         }
     </style>
 </head>
 <body>
 
     <header>
-        
         <div class="animation-container">
-            <svg class="floating-planet" width="70" height="70" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="24" fill="#0366d6" />
-                <ellipse cx="50" cy="50" rx="42" ry="12" fill="none" stroke="#111" stroke-width="4" transform="rotate(-20 50 50)" />
-                <circle cx="42" cy="40" r="4" fill="#FFF" opacity="0.6" />
-                <circle cx="58" cy="62" r="2" fill="#FFF" opacity="0.4" />
+            <svg class="floating-planet" width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="24" fill="var(--accent)" />
+                <ellipse cx="50" cy="50" rx="42" ry="12" fill="none" stroke="#2D2A26" stroke-width="3" transform="rotate(-15 50 50)" />
+                <circle cx="42" cy="40" r="4" fill="#FFF" opacity="0.8" />
             </svg>
         </div>
 
-        <h1>Adrito Das</h1>
-        <div class="contact-info">
-            Incoming B.S. in Mathematics and Computer Science @ <strong>NYU</strong> (Shanghai)<br>
-            <a href="mailto:adritodas25@gmail.com">adritodas25@gmail.com</a> • 
-            <a href="https://github.com/ad8778-thegoat" target="_blank">GitHub</a>
+        <h1>Hi, I'm Adrito.</h1>
+        <div class="intro-text">
+            I'm an incoming <strong>Math & Computer Science</strong> major at <strong>NYU</strong> (Shanghai). I spend my time researching machine learning—specifically focusing on deep learning for medical imaging, self-supervised learning, and spatiotemporal architectures. 
+            <br><br>
+            Feel free to reach out at <a href="mailto:adritodas25@gmail.com">adritodas25@gmail.com</a> or check out my code on <a href="https://github.com/ad8778-thegoat" target="_blank">GitHub</a>.
         </div>
-        <p>
-            Undergraduate machine learning researcher focused on deep learning for medical imaging, self-supervised learning, and spatiotemporal architectures.
-        </p>
     </header>
 
-    <section>
-        <h2>Experience & Leadership</h2>
+    <main>
+        <section>
+            <h2>Machine Learning Research</h2>
 
-        <article>
-            <h3>Economics Research Assistant</h3>
-            <div class="project-meta">Harvard University | Under Prof. Jeffrey Miron</div>
-            <ul>
-                <li>Conducted economic and policy research, contributing to high-level analysis and dataset synthesis.</li>
-            </ul>
-        </article>
-    </section>
-
-    <section>
-        <h2>Core Machine Learning Research</h2>
-
-        <article>
-            <h3>Automated Coronary Artery Disease Detection Using a CNN Model with Temporal Attention</h3>
-            <div class="project-meta">medRxiv Preprint | Co-Author / ML Engineer</div>
-            <div class="project-links">
-                <a href="https://doi.org/10.64898/2026.02.11.26346085" target="_blank">[Paper DOI]</a>
-                <a href="https://github.com/ad8778-thegoat/CAD-Temporal-Attention-CNN" target="_blank">[GitHub Code]</a>
+            <div class="project">
+                <span class="project-meta">medRxiv Preprint • ML Engineer & Co-Author</span>
+                <h3>Automated Coronary Artery Disease Detection</h3>
+                <p>
+                    I helped develop an automated CAD detection model using a CNN with a temporal attention mechanism. My specific focus was building the 2D spatial feature extraction pipeline using ResNet18 and writing the PyTorch optimization loops. By automatically extracting features from sequential coronary angiograms, we were able to significantly improve detection accuracy and speed compared to traditional models.
+                </p>
+                <div class="links">
+                    <a href="https://doi.org/10.64898/2026.02.11.26346085" target="_blank">Read the Paper</a> &nbsp;|&nbsp; 
+                    <a href="https://github.com/ad8778-thegoat/CAD-Temporal-Attention-CNN" target="_blank">View Repository</a>
+                </div>
+                <div class="tech-stack">
+                    <span>PyTorch</span>
+                    <span>ResNet18</span>
+                    <span>CNNs</span>
+                    <span>Data Engineering</span>
+                </div>
             </div>
-            <ul>
-                <li>Engineered the 2D spatial feature extraction pipeline (ResNet18) and PyTorch optimization loops for an automated CAD detection model.</li>
-                <li>Integrated a temporal attention mechanism to automatically extract and emphasize critical features from sequential medical imaging data.</li>
-                <li>Achieved significant improvements in both detection accuracy and processing time compared to traditional CNN architectures.</li>
-            </ul>
-            <div>
-                <span class="tag">PyTorch</span>
-                <span class="tag">ResNet18</span>
-                <span class="tag">Data Engineering</span>
-                <span class="tag">CNNs</span>
+
+            <div class="project">
+                <span class="project-meta">In Preparation (NeurIPS ML4H) • Sole Author</span>
+                <h3>Few-Shot Cardiac Sequence Analysis</h3>
+                <p>
+                    Currently developing a 3D Spatiotemporal Masked Autoencoder (MAE). The goal here is to solve a major issue in low-resource medical settings: overfitting. By using self-supervised reconstruction on cardiac MRIs, the model learns to understand the data without needing massive labeled datasets.
+                </p>
+                <div class="tech-stack">
+                    <span>PyTorch</span>
+                    <span>Self-Supervised Learning</span>
+                    <span>3D Convolutions</span>
+                </div>
             </div>
-        </article>
+        </section>
 
-        <article>
-            <h3>Self-Supervised Spatiotemporal Masked Autoencoders for Few-Shot Cardiac Sequence Analysis</h3>
-            <div class="project-meta">In Preparation (Targeting NeurIPS ML4H) | Sole Author</div>
-            <ul>
-                <li>Developing a 3D Spatiotemporal Masked Autoencoder (MAE) to mitigate overfitting in low-resource cardiac MRI analysis via self-supervised reconstruction.</li>
-            </ul>
-            <div>
-                <span class="tag">PyTorch</span>
-                <span class="tag">Self-Supervised Learning</span>
-                <span class="tag">3D Convolutions</span>
+        <section>
+            <h2>Clinical Data & Economics</h2>
+
+            <div class="project">
+                <span class="project-meta">Published in AJMC & JPHMP • Harvard/MIT Collaboration</span>
+                <h3>GLP-1 Market Expansion & Efficacy</h3>
+                <p>
+                    Working alongside a Harvard undergrad, I synthesized clinical data from over 28 randomized controlled trials (28,000+ patients) to compare the efficacy of semaglutide and tirzepatide (~11.4% mean weight loss). We also modeled the global market trajectory, forecasting growth to $63.54B by 2032, and tracked how adverse events from compounded alternatives drove 2025 FDA enforcement actions.
+                </p>
             </div>
-        </article>
-    </section>
 
-    <section>
-        <h2>Clinical & Economic Research</h2>
+            <div class="project">
+                <span class="project-meta">Published in Oncology Advances</span>
+                <h3>Predicting CNS Tumor Disease Burden</h3>
+                <p>
+                    An epidemiological deep dive using GLOBOCAN 2022 datasets to evaluate over 42,000 new CNS cancer cases in the SAARC region. I projected a 22%–70% disease burden surge by 2045 and mapped out neurosurgical density against WHO benchmarks—highlighting that the region is operating at less than 20% of the recommended capacity.
+                </p>
+            </div>
 
-        <article>
-            <h3>Market Expansion and Efficacy of GLP-1 Receptor Agonists</h3>
-            <div class="project-meta">Harvard/MIT Collaboration | Published in AJMC / JPHMP</div>
-            <ul>
-                <li>Analyzed the market expansion of GLP-1 receptor agonists, forecasting a global market growth from $28.19B (2025) to $63.54B by 2032 (12.3% CAGR).</li>
-                <li>Synthesized clinical data from 28+ randomized controlled trials (28,000+ patients) to evaluate the delta in efficacy between semaglutide and tirzepatide (~11.4% mean weight loss).</li>
-                <li>Investigated the "Supply-Regulatory Loop": Tracked how 1,000+ adverse events from compounded alternatives influenced the 2025 FDA enforcement actions and manufacturer revenue surges.</li>
+            <div class="project">
+                <span class="project-meta">Harvard University</span>
+                <h3>Economics Research Assistant</h3>
+                <p>
+                    Assisted Professor Jeffrey Miron with economic and policy research, contributing to high-level data analysis and dataset synthesis.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tools & Technologies</h2>
+            <p>
+                <strong>Languages:</strong> Python, C++<br>
+                <strong>ML & Data:</strong> PyTorch, Scikit-Learn, Pandas, NumPy, OpenCV<br>
+                <strong>Workflow:</strong> Git/GitHub, Linux CLI
+            </p>
+        </section>
+
+        <section>
+            <h2>Awards & Recognition</h2>
+            <ul class="custom-list">
+                <li><strong>Top 8 in the Nation</strong> (out of 11,000 students) at the National Economics Challenge <a href="https://www.councilforeconed.org/wp-content/uploads/NEC-2025-program-v4.pdf#page=7" target="_blank">(View Program - pg. 7)</a>.</li>
+                <li><strong>NASA International Space Apps Challenge:</strong> "Galactic Problem Solver" Award.</li>
             </ul>
-        </article>
+        </section>
+    </main>
 
-        <article>
-            <h3>Predictive Analytics of CNS Tumor Disease Burden</h3>
-            <div class="project-meta">Epidemiological Analysis | Published in Oncology Advances</div>
-            <ul>
-                <li>Evaluated 42,822 new CNS cancer cases and 34,682 deaths in the SAARC region using GLOBOCAN 2022 datasets.</li>
-                <li>Projected a 22%–70% surge in disease burden by 2045, identifying a critical mismatch between rising patient demand and workforce growth.</li>
-                <li>Mapped neurosurgical density against WHO benchmarks, highlighting that the region operates at less than 20% of the recommended capacity for essential neuro-oncologic care.</li>
-            </ul>
-        </article>
-    </section>
-
-    <section>
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><strong>Programming:</strong> Python, C++</li>
-            <li><strong>Deep Learning:</strong> PyTorch, Scikit-Learn</li>
-            <li><strong>Data & Tools:</strong> Pandas, NumPy, OpenCV, Git/GitHub, Linux CLI</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Honors & Awards</h2>
-        <ul>
-            <li><strong>Published Research:</strong> Features in JPHMP, JAMA, AJMC, and Oncology Advances</li>
-            <li><strong>Conrad Innovator Award</strong></li>
-            <li><strong>National Economics Challenge:</strong> Top 8 in Nation out of 11,000 students <a href="https://www.councilforeconed.org/wp-content/uploads/NEC-2025-program-v4.pdf#page=7" target="_blank"><strong>[View Program - pg. 7]</strong></a></li>
-            <li><strong>NASA International Space Apps Challenge:</strong> "Galactic Problem Solver" Award</li>
-            <li><strong>Temple Service Award:</strong> Recognized for over 500+ volunteer hours</li>
-        </ul>
-    </section>
-
-    <footer style="margin-top: 4rem; padding-top: 1rem; border-top: 1px solid #ddd; font-size: 0.85rem; color: #777; text-align: center;">
-        &copy; 2026 Adrito Das. 
+    <footer>
+        <div>&copy; 2026 Adrito Das</div>
+        <div>Math + CS @ NYU</div>
     </footer>
 
 </body>
